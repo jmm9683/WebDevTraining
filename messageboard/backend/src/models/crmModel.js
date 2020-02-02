@@ -23,22 +23,5 @@ export const ContactSchema = new Schema({
     created_date: {
         type: Date,
         default:  Date.now
-    },
-    Links: {
-        Chassis: [
-            {
-                dataid: String
-            }
-        ],
-        ManagedBy: [
-            {dataid: String}
-        ],
-        SimpleNetwork: {
-            dataid: String
-        },
-        SimpleStorage: {
-            dataid: String
-        },
-        Oem: {}
-    },
+    }
 });

@@ -1,5 +1,7 @@
 import express from 'express';
-import routes from './src/routes/crmRoutes';
+import crmRoutes from './src/routes/crmRoutes';
+import sysColRoutes from './src/routes/sysColRoutes';
+import sysRoutes from './src/routes/sysRoutes';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
@@ -18,7 +20,9 @@ mongoose.connect('mongodb://localhost:27017/CRMdb', {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-routes(app);
+crmRoutes(app);
+sysColRoutes(app);
+sysRoutes(app);
 
 // serving static files
 app.use(express.static('public'));
